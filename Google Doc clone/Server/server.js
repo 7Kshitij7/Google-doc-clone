@@ -11,7 +11,7 @@ mongoose
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: "https://google-doc-clone-jet.vercel.app",
+    origin: ["https://google-doc-clone-jet.vercel.app","https://google-doc-clone-cyjn6iko9-7kshitij7.vercel.app","https://google-doc-clone-git-main-7kshitij7.vercel.app","https://google-doc-clone-cyjn6iko9-7kshitij7.vercel.app"]
     methods: ["GET", "POST"],
      allowedHeaders: ["*"], // You can adjust allowed headers as needed
      credentials: true, // You might need this if you're dealing with cookies or authentication
