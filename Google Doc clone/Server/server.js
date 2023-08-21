@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Document = require('./Document')
 
-const remoteMongoDBURL = "mongodb+srv://ranjankshitij007:Kshitij123@cluster0.0dy2ost.mongodb.net/google-docs"
+const remoteMongoDBURL = process.env.MONGODB_URL;
 mongoose.set("strictQuery", false);
 console.log(remoteMongoDBURL)
 mongoose
