@@ -3,7 +3,6 @@ const Document = require('./Document')
 
 const remoteMongoDBURL = process.env.MONGODB_URL;
 mongoose.set("strictQuery", false);
-console.log(remoteMongoDBURL)
 mongoose
   .connect(remoteMongoDBURL)
   .then(() => console.log("connected to data base"))
