@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Document = require('./Document')
 
-const remoteMongoDBURL = process.env.MONGODB_URL;
+const remoteMongoDBURL = process.env.MONGODB_URL
 mongoose.set("strictQuery", false);
 mongoose
   .connect(remoteMongoDBURL)
@@ -10,10 +10,11 @@ mongoose
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: ["https://google-doc-clone-jet.vercel.app","https://google-doc-clone-cyjn6iko9-7kshitij7.vercel.app","https://google-doc-clone-git-main-7kshitij7.vercel.app","https://google-doc-clone-cyjn6iko9-7kshitij7.vercel.app"]
+    origin: ["https://google-docs-clone-72aqqyrj7-rajshriyanhu.vercel.app",
+             "https://google-docs-clone-git-main-rajshriyanhu.vercel.app"],
     methods: ["GET", "POST"],
-     allowedHeaders: ["*"], // You can adjust allowed headers as needed
-     credentials: true, // You might need this if you're dealing with cookies or authentication
+    allowedHeaders: ["*"], // You can adjust allowed headers as needed
+    credentials: true, // You might need this if you're dealing with cookies or authentication
   },
 });
 
